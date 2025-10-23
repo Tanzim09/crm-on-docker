@@ -1,2 +1,3 @@
 
-web: gunicorn dcrm.wsgi
+web: python manage.py migrate && gunicorn dcrm.wsgi
+
