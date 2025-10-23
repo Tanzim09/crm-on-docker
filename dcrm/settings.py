@@ -133,5 +133,5 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ["https://yourapp.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://crm-on-docker.onrender.com/"]
 
