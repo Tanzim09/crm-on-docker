@@ -70,16 +70,16 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'myproject',            # your MySQL database name
-#        'USER': 'root',                 # your MySQL username
-#        'PASSWORD': 'Admin',    # your MySQL password
-#         'HOST': 'localhost',            # or 127.0.0.1
-#        'PORT': '3306',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myproject',            # your MySQL database name
+        'USER': 'root',                 # your MySQL username
+        'PASSWORD': 'Admin',    # your MySQL password
+        'HOST': 'localhost',            # or 127.0.0.1
+        'PORT': '3306',
+    }
+}
 
 # If running on Render
 if os.getenv("DATABASE_URL"):
@@ -89,13 +89,6 @@ if os.getenv("DATABASE_URL"):
         ssl_require=False,
     )
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=True
-    )
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
