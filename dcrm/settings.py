@@ -20,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY", "replace-this-secret")
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
-ALLOWED_HOSTS = ["*"]   # later you can restrict to your render domain
+ALLOWED_HOSTS = ['crm-on-docker.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 
@@ -133,5 +134,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ["https://crm-on-docker.onrender.com/"]
+CSRF_TRUSTED_ORIGINS = [
+    'https://crm-on-docker.onrender.com',
+    'http://localhost:8000',
+]
+
 
