@@ -1,3 +1,4 @@
 
-web: python manage.py migrate && gunicorn dcrm.wsgi
+web: ./start.sh
+
 
